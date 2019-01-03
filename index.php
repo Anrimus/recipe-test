@@ -175,9 +175,9 @@ function findClosest($recipes, $products)
     $keyDate = [];
 
     foreach ($recipes as $key => $recipe) {
-        $lowestDate;
+        $lowestDate = null;
         foreach ($recipe->ingredients as $ingredient) {
-            $ingredientDate;
+            $ingredientDate = null;
             foreach ($products as $product) {
                 if ($ingredient->item === $product['item']) {
                     $ingredientDate = $product['unixExpiry'];
